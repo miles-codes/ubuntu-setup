@@ -241,6 +241,14 @@ git config --global user.email your.email@example.com
 git config --global init.defaultBranch master
 ```
 
+**Useful Git Aliases:**
+```bash
+# List all tags in ascending order with date and annotation
+git config --global alias.tags "tag -l --sort=creatordate --format='%(creatordate:short) %(refname:short) - %(contents:subject)'"
+
+# Usage: git tags
+```
+
 ### Bash Aliases
 Add common aliases to your `.bashrc`:
 
