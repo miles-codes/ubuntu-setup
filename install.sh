@@ -98,6 +98,7 @@ show_apps_menu() {
         "docker" "Container platform" OFF \
         "node" "Node.js (via nvm)" OFF \
         "postgresql" "PostgreSQL database" OFF \
+        "beekeeper-studio" "Database management GUI" OFF \
         "uv" "Python package installer (pip alternative)" OFF \
         "sublime" "Sublime Text editor" OFF \
         "brave" "Brave Browser (Nightly)" OFF \
@@ -127,6 +128,7 @@ show_apps_menu() {
             docker) install_docker ;;
             node) install_node ;;
             postgresql) install_postgresql ;;
+            beekeeper-studio) install_beekeeper_studio ;;
             uv) install_uv ;;
             sublime) install_sublime ;;
             brave) install_brave ;;

@@ -54,6 +54,7 @@ ubuntu-setup/
 - **Docker** - Container platform
 - **Node.js** - JavaScript runtime (via nvm)
 - **PostgreSQL** - Object-relational database
+- **Beekeeper Studio** - Database management GUI
 - **uv** - Python package installer
 - **Sublime Text** - Text editor
 - **PyCharm Community** - Python IDE

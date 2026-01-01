@@ -117,6 +117,22 @@ install_postgresql() {
     echo "  sudo -u postgres createuser --interactive"
 }
 
+install_beekeeper_studio() {
+    echo "Installing Beekeeper Studio..."
+
+    # Set up the repository
+    curl -fsSL https://deb.beekeeperstudio.io/beekeeper.key | sudo gpg --dearmor --output /usr/share/keyrings/beekeeper.gpg
+    sudo chmod go+r /usr/share/keyrings/beekeeper.gpg
+    echo "deb [signed-by=/usr/share/keyrings/beekeeper.gpg] https://deb.beekeeperstudio.io stable main" \
+        | sudo tee /etc/apt/sources.list.d/beekeeper-studio-app.list > /dev/null
+
+    # Install the application
+    sudo apt update
+    sudo apt install -y beekeeper-studio
+
+    echo "Beekeeper Studio installed successfully!"
+}
+
 # Export functions so they can be called from main script
 export -f install_git
 export -f install_sublime
@@ -127,3 +143,4 @@ export -f install_docker
 export -f install_uv
 export -f install_node
 export -f install_postgresql
+export -f install_beekeeper_studio

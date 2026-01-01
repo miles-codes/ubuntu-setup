@@ -162,6 +162,23 @@ GRANT ALL PRIVILEGES ON DATABASE myapp TO myuser;
 
 For more information, see the [official PostgreSQL documentation](https://www.postgresql.org/docs/).
 
+### Beekeeper Studio
+Universal database manager and SQL editor with support for MySQL, PostgreSQL, SQLite, SQL Server, and more.
+
+```bash
+# Set up the repository
+curl -fsSL https://deb.beekeeperstudio.io/beekeeper.key | sudo gpg --dearmor --output /usr/share/keyrings/beekeeper.gpg
+sudo chmod go+r /usr/share/keyrings/beekeeper.gpg
+echo "deb [signed-by=/usr/share/keyrings/beekeeper.gpg] https://deb.beekeeperstudio.io stable main" \
+    | sudo tee /etc/apt/sources.list.d/beekeeper-studio-app.list > /dev/null
+
+# Install
+sudo apt update
+sudo apt install -y beekeeper-studio
+```
+
+For more information, see the [official Beekeeper Studio documentation](https://docs.beekeeperstudio.io/).
+
 ### uv
 Extremely fast Python package installer and resolver (modern alternative to pip).
 
