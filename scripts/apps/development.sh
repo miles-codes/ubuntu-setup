@@ -36,6 +36,20 @@ install_claude_code() {
     fi
 }
 
+install_amp() {
+    echo "Installing Amp..."
+    curl -fsSL https://ampcode.com/install.sh | bash
+
+    # Add to PATH if not already present
+    if ! grep -q 'export PATH="$HOME/.local/bin:$PATH"' ~/.bashrc; then
+        echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+        echo "Added Amp to PATH in ~/.bashrc"
+    fi
+
+    echo "Amp installed successfully!"
+    echo "Note: Run 'amp' to start. It will prompt for login on first run."
+}
+
 install_docker() {
     echo "Installing Docker using convenience script..."
     curl -fsSL https://get.docker.com -o get-docker.sh
@@ -139,6 +153,7 @@ export -f install_sublime
 export -f install_pycharm
 export -f install_webstorm
 export -f install_claude_code
+export -f install_amp
 export -f install_docker
 export -f install_uv
 export -f install_node

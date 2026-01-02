@@ -106,6 +106,7 @@ show_apps_menu() {
         "webstorm" "WebStorm IDE" OFF \
         "xournalpp" "Note-taking and PDF annotation" OFF \
         "claude-code" "Claude Code CLI" OFF \
+        "amp" "Amp coding agent CLI" OFF \
         3>&1 1>&2 2>&3)
 
     if [ -z "$apps" ]; then
@@ -136,6 +137,7 @@ show_apps_menu() {
             webstorm) install_webstorm ;;
             xournalpp) install_xournalpp ;;
             claude-code) install_claude_code ;;
+            amp) install_amp ;;
         esac
     done
 

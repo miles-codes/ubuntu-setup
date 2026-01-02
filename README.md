@@ -60,6 +60,7 @@ ubuntu-setup/
 - **PyCharm Community** - Python IDE
 - **WebStorm** - JavaScript/TypeScript IDE
 - **Claude Code** - AI coding assistant CLI
+- **Amp** - Frontier coding agent CLI
 
 ### Browsers
 - **Brave Browser** (Nightly) - Privacy-focused browser
